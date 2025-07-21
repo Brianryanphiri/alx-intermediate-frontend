@@ -546,6 +546,9 @@
 .auto-rows-min {
   grid-auto-rows: min-content;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .grid-cols-none {
   grid-template-columns: none;
 }
@@ -2092,6 +2095,11 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
   }
 }
 @property --tw-translate-x {
